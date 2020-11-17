@@ -1,0 +1,321 @@
+@import "lib/vars";
+@import "lib/reboot";
+@import "lib/keyframes";
+@import "lib/fontface";
+
+@import "lib/colors";
+@import "lib/typo";
+@import "lib/utils";
+
+@import "partials/layout";
+@import "partials/modals";
+
+//* {
+//    &:not(a) {
+//         border: 1px solid pink;
+//}
+//}
+
+$color_1: #cd49b0;
+$color_2: #6a6464;
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+
+}
+
+.splash {
+    /* H1 - Main title */
+
+    position: absolute;
+    height: 16px;
+    top: 360px;
+
+    /* H1 - Main title */    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    
+    color:$color_2;
+    
+}
+
+
+
+h1 {
+    /* H1 - Main title */
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+        
+    color: $color_1;
+
+    border: 0px;
+}
+
+h2 {
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    
+    color: $color_1;
+    border: 0px;
+}
+
+h3 {
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: $color_2;
+    border: 0px;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #000000;
+    border: 0px;
+}
+
+.btn_secondary {
+    /* cb_Secondary */
+    height: 42px;
+    margin: 10%;
+
+    /* Rectangle 2 */
+
+    background: #ffffff;
+    /* color_4 */
+    border: 2px solid #6a6464;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+
+    color:$color_2
+}
+
+.btn_primary {
+    /* cb_Secondary */
+
+    height: 42px;
+    margin: 10%;
+
+    /* Rectangle 2 */
+
+    background: $color_1;    
+    border: 2px solid $color_2;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.btn_install {
+    
+
+    height: 32px;    
+    width: 100%;
+
+    /* Rectangle 2 */
+
+    background: #ffffff;
+    /* color_4 */
+    border: 1px solid #6a6464;    
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    //line-height: 36px;
+    text-align: center;
+
+    color: $color_2
+    
+}
+
+.btn_install:hover {
+    
+
+    height: 32px;    
+    width: 100%;
+
+    /* Rectangle 2 */
+
+    background: #ffffff;
+    /* color_4 */
+    border: 2px solid #6a6464;    
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    //line-height: 36px;
+    text-align: center;
+
+    color: $color_1;
+    cursor: pointer;
+    
+}
+
+.posicion_btn_install
+{
+    display: flex;    
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+
+#menu_page,#settings_page, #leaderboard_page  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr 1fr;    
+    padding: 0px;
+    margin: 0px;
+
+    align-items: center;
+    width: 500px;
+    padding: $base * 3;
+    
+
+    .main, .slider, .lboard
+    {
+        height: 100%;  
+        padding: $base * 3;   
+        align-items: center;
+
+    }
+}
+
+
+#main_page {
+    display: flex;
+    flex-direction: column;
+    padding: $base * 3;
+    
+
+    .ui {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .game {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+.setting
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+}
+
+.setting_label
+{
+    width: 200px;
+}
+
+.footer
+{
+    //border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    a {
+        color: $color_2;
+        font-size: 18px;        
+        font-weight: bold;
+    }
+    a:hover {
+        color:$color_1;
+    }
+    
+    .foot_navigation
+    {
+
+        width: 100%;
+        
+        align-items: center;
+
+        .inline_menu {    
+            display: flex;        
+            justify-content: space-around;
+            align-items: center;                           
+        }        
+    }    
+}
+
+.lboard_table
+{
+    display: flex;
+    flex-direction: column;
+    
+
+    .lboard_item
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px $color_1 dotted;
+    }
+}
+
+.max_score {
+    color: $color_2;
+    font-size: 24px;
+    font-weight: bold;       
+    text-align: center;  
+    align-items: center;
+}
+
+
+
+
+
+
+
+
